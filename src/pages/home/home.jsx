@@ -13,8 +13,7 @@ const Home = () => {
         //Comunicacion con el servidor
         const text = textOut.trim()
         if (!text) return
-
-        const respuesta = await fetch('http://localhost:3001/chat', {
+        const respuesta = await fetch(`${import.meta.env.VITE_API_URL}/chat`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
