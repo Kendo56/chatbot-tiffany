@@ -1,0 +1,191 @@
+:root {
+    --Purple-300: hsl(276, 100%, 81%);
+    --Purple-600: hsl(276, 55%, 52%);
+    --Gray-500: hsl(270, 7%, 64%);
+    --Gray-300: hsl(206, 6%, 79%);
+    --Purple-950: hsl(271, 36%, 24%);
+    --Pink-500: hsl(293, 100%, 63%);
+    --Purple-500: hsl(264, 100%, 61%);
+    --White: hsl(0, 100%, 100%);
+    --Gray-100: hsl(270, 20%, 96%);
+    --Pink-400: hsl(289, 100%, 72%);
+    --border-30: 30px;
+    --border-50: 50%;
+
+    --font: font-family: Roboto Variable, Roboto, Helvetica Neue, Helvetica, Segoe UI, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* phoneSection */
+.phoneSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 32px 16px;
+    background-color: var(--White);
+}
+
+/* phone-device */
+.phone-device {
+    position: relative;
+    width: 320px;
+    height: 640px;
+    padding: 10px;
+    background-color: var(--White);
+    border: 1px solid var(--Gray-300);
+    border-radius: var(--border-30);
+    box-shadow: 0 20px 40px var(--Gray-300);
+
+    @media(min-width: 769px) {
+        width: 50%;
+    }
+}
+
+.phoneNotch {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 22px;
+    background-color: var(--White);
+    border-radius: 0 0 16px 16px;
+    z-index: 2;
+}
+
+.phoneScreen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Gray-100);
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+/* Header */
+.phoneHeader {
+    flex-shrink: 0;
+    min-height: 100px;
+    padding: 38px 16px 14px;
+    background: linear-gradient(90deg, var(--Purple-500) 0%, var(--Pink-500) 100%);
+    border-radius: 0 0 var(--border-30) var(--border-30);
+}
+
+/* Body */
+.phoneBody {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+/* Message out */
+.message-out-container {
+    padding-left: 50%;
+    word-break: break-all
+}
+
+.message-out-content {
+    background-color: var(--White);
+    border-radius: 12px 12px 4px 12px;
+    padding: 6px;
+}
+
+.message-out {
+    font-family: var(--font);
+    white-space: pre-wrap;
+    color: var(--Gray-500);
+    font-size: 0.7rem;
+}
+
+/* Message in */
+.message-in-container {
+    padding-right: 50%;
+    word-break: break-all;
+    transition: all 0.5s ease-in-out;
+}
+
+.message-in-content {
+    background-color: var(--Gray-300);
+    border-radius: 12px 12px 12px 1px;
+    padding: 6px;
+}
+
+.message-in {
+    font-family: var(--font);
+    white-space: pre-wrap;
+    color: var(--Purple-600);
+    font-size: 0.7rem;
+}
+
+/* Footer */
+.phoneFooter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    padding: 12px 14px;
+    background-color: var(--White);
+}
+
+.phoneInput {
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    padding: 0 18px;
+    font-family: var(--font);
+    font-size: 14px;
+    color: var(--Purple-950);
+    background-color: var(--Gray-100);
+    border: 1px solid transparent;
+    border-radius: var(--border-30);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.phoneInput::placeholder {
+    color: var(--Gray-500);
+}
+
+.phoneInput:focus {
+    border-color: var(--Purple-300);
+}
+
+/* btn-send */
+.btn-send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    color: var(--White);
+    background-color: var(--Purple-950);
+    border: none;
+    border-radius: var(--border-50);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-send:hover {
+    background-color: var(--Purple-600);
+}
+
+.btn-send:active {
+    transform: scale(0.95);
+}
+
+.sendIcon {
+    width: 18px;
+    height: 18px;
+}
